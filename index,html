@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sog.rng</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>sog.rng</h1>
+    <button id="rollButton">Roll for a cat!</button>
+    <div id="result"></div>
+    <div id="catDisplay"></div>
+    
+    <!-- Inventory Panel with Booster Tier Selection -->
+    <div id="inventoryPanel">
+      <p id="inventory">Soggy Cats: 0 | Boosters: Basic Luck Booster: 0 | Silver Luck Booster: 0 | Gold Luck Booster: 0</p>
+      <label for="boosterSelect">Choose Booster Tier:</label>
+      <select id="boosterSelect">
+        <option value="basic">Basic Luck Booster (5 Soggy Cats)</option>
+        <option value="silver">Silver Luck Booster (10 Soggy Cats)</option>
+        <option value="gold">Gold Luck Booster (20 Soggy Cats)</option>
+        <option value="platinum">Platinum Luck Booster (30 Soggy Cats)</option>
+        <option value="diamond">Diamond Luck Booster (40 Soggy Cats)</option>
+      </select>
+      <label>
+        <input type="checkbox" id="useBooster" /> Use Luck Booster for next roll
+      </label>
+      <button id="tradeButton">Trade Soggy Cats for a Luck Booster</button>
+    </div>
+    
+    <!-- Achievements Panel -->
+    <div id="achievementsPanel">
+      <h2>Achievements</h2>
+      <div id="achievementsList"></div>
+    </div>
+    
+    <!-- Achievement Popup Notification -->
+    <div id="achievementPopup"></div>
+    
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

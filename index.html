@@ -7,34 +7,60 @@
   </head>
   <body>
     <h1>sog.rng</h1>
-    <button id="rollButton">Roll for a cat!</button>
-    <div id="result"></div>
-    <div id="catDisplay"></div>
-    
-    <!-- Inventory Panel with Booster Tier Selection -->
-    <div id="inventoryPanel">
-      <p id="inventory">Soggy Cats: 0 | Boosters: Basic Luck Booster: 0 | Silver Luck Booster: 0 | Gold Luck Booster: 0</p>
-      <label for="boosterSelect">Choose Booster Tier:</label>
-      <select id="boosterSelect">
-        <option value="basic">Basic Luck Booster (5 Soggy Cats)</option>
-        <option value="silver">Silver Luck Booster (10 Soggy Cats)</option>
-        <option value="gold">Gold Luck Booster (20 Soggy Cats)</option>
-        <option value="platinum">Platinum Luck Booster (30 Soggy Cats)</option>
-        <option value="diamond">Diamond Luck Booster (40 Soggy Cats)</option>
-      </select>
-      <label>
-        <input type="checkbox" id="useBooster" /> Use Luck Booster for next roll
-      </label>
-      <button id="tradeButton">Trade Soggy Cats for a Luck Booster</button>
+    <div class="game-container">
+      <div id="gamePanel">
+        <button id="rollButton">Roll for Soggy Cat</button>
+        <div id="result"></div>
+        <div id="catDisplay"></div>
+      </div>
+      <div id="shopPanel">
+        <div id="inventoryPanel">
+          <h2>Inventory</h2>
+          <p id="inventory">Soggy Cats: 0 | Boosters: Basic Luck Booster: 0 | Silver Luck Booster: 0 | Gold Luck Booster: 0 | Lucky Gloves: 0</p>
+          <div class="trade-section">
+            <label for="boosterSelect">Choose Booster Tier:</label>
+            <select id="boosterSelect">
+              <option value="basic">Basic Luck Booster (5 Soggy Cats)</option>
+              <option value="silver">Silver Luck Booster (10 Soggy Cats)</option>
+              <option value="gold">Gold Luck Booster (20 Soggy Cats)</option>
+              <option value="platinum">Platinum Luck Booster (30 Soggy Cats)</option>
+              <option value="diamond">Diamond Luck Booster (40 Soggy Cats)</option>
+            </select>
+            <label>
+              <input type="checkbox" id="useBooster" /> Use Luck Booster for next roll
+            </label>
+            <button id="tradeButton">Trade Soggy Cats for a Luck Booster</button>
+          </div>
+          <div class="trade-section gloves-section">
+            <div class="glove-info">
+              <svg class="glove-icon" viewBox="0 0 64 64">
+                <path d="M20,30 a10,10 0 0,1 20,0 v14 h-20 z" fill="#d4af37" stroke="#8c7b1f" stroke-width="2"></path>
+                <circle cx="30" cy="50" r="5" fill="#8c7b1f"></circle>
+              </svg>
+              <span>Lucky Gloves provide a permanent +50 bonus per glove to your roll.</span>
+            </div>
+            <button id="tradeGlovesButton">Trade Soggy Cats for a Lucky Glove (Cost: 200)</button>
+          </div>
+        </div>
+        <div id="statsPanel"></div>
+      </div>
+      <div id="betPanel">
+        <h2>Soggy Cat Rarity Bet</h2>
+        <label for="rarityGuess">Guess the Rarity:</label>
+        <select id="rarityGuess">
+          <option value="Common">Common</option>
+          <option value="Rare">Rare</option>
+          <option value="Epic">Epic</option>
+          <option value="Legendary">Legendary</option>
+        </select>
+        <button id="betButton">Place Bet</button>
+        <div id="betResult"></div>
+      </div>
+      <div id="achievementsPanel">
+        <h2>Achievements</h2>
+        <div id="achievementsList"></div>
+      </div>
     </div>
-    
-    <!-- Achievements Panel -->
-    <div id="achievementsPanel">
-      <h2>Achievements</h2>
-      <div id="achievementsList"></div>
-    </div>
-    
-    <!-- Achievement Popup Notification -->
     <div id="achievementPopup"></div>
     
     <script type="module" src="script.js"></script>

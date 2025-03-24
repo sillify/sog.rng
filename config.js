@@ -14,3 +14,15 @@ export const BOOSTER_TIERS = [
   { id: "platinum", name: "Platinum Luck Booster", tradeCost: 30, rerollCount: 4 },
   { id: "diamond", name: "Diamond Luck Booster", tradeCost: 40, rerollCount: 5 }
 ];
+
+export const CAT_ACHIEVEMENTS_COUNT = 400;
+export const BOOSTER_ACHIEVEMENTS_COUNT = 300;
+export const ROLL_ACHIEVEMENTS_COUNT = 300;
+
+// New feature: Lucky Gloves for permanent luck boosts
+export const GLOVE_TRADE_COST = 200;
+export const GLOVE_BONUS = 50;
+
+// Append new betting configuration constants:
+export const BET_BONUS_BOOSTERS_MIN = 1;
+export const BET_BONUS_BOOSTERS_MAX = 3;
